@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body> 
+            <span>Total clicks : 0</span>
+            <button id="btn">Click Me</button> <!-- 버튼 id 지정 -->
+    </body>
+    <script>
+        let counter = 0; 
+        const button = document.getElementById("btn"); // id로 가져오기
+        const span = document.querySelector("span"); // span이라는 변수에 처음으로 매칭 되는 span 태그의 요소 담아
+        function handleClick() {
+            console.log("i have been clicked"); 
+            counter = counter + 1;
+            span.innerText = `Total clicks :  ${counter}`; // span에 텍스트 넣기(기존의 텍스트 사라짐)
+        }
+        button.addEventListener("click", handleClick); // 클릭 시 이벤트를 함수에 전달
+    </script>
+</html>
